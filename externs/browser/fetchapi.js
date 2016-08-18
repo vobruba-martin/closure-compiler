@@ -87,6 +87,30 @@ Headers.prototype.values = function() {};
 Headers.prototype[Symbol.iterator] = function() {};
 
 /**
+ * @interface
+ * @see https://fetch.spec.whatwg.org/#body
+ */
+function Body() {};
+
+/** @type {boolean} */
+Body.prototype.bodyUsed;
+
+/** @return {!Promise<!ArrayBuffer>} */
+Body.prototype.arrayBuffer = function() {};
+
+/** @return {!Promise<!Blob>} */
+Body.prototype.blob = function() {};
+
+/** @return {!Promise<!FormData>} */
+Body.prototype.formData = function() {};
+
+/** @return {!Promise<*>} */
+Body.prototype.json = function() {};
+
+/** @return {!Promise<string>} */
+Body.prototype.text = function() {};
+
+/**
  * @typedef {!Blob|!FormData|string}
  */
 var BodyInit;
@@ -96,25 +120,26 @@ var BodyInit;
  * @param {!RequestInfo} input
  * @param {RequestInit=} opt_init
  * @constructor
+ * @implements {Body}
  */
 function Request(input, opt_init) {}
 
-/** @type {boolean} */
+/** @inheritDoc */
 Request.prototype.bodyUsed;
 
-/** @return {!Promise<!ArrayBuffer>} */
+/** @inheritDoc */
 Request.prototype.arrayBuffer = function() {};
 
-/** @return {!Promise<!Blob>} */
+/** @inheritDoc */
 Request.prototype.blob = function() {};
 
-/** @return {!Promise<!FormData>} */
+/** @inheritDoc */
 Request.prototype.formData = function() {};
 
-/** @return {!Promise<!Object>} */
+/** @inheritDoc */
 Request.prototype.json = function() {};
 
-/** @return {!Promise<string>} */
+/** @inheritDoc */
 Request.prototype.text = function() {};
 
 /** @type {string} */
@@ -233,6 +258,7 @@ var RequestCache = {
  * @param {BodyInit=} opt_body
  * @param {ResponseInit=} opt_init
  * @constructor
+ * @implements {Body}
  */
 function Response(opt_body, opt_init) {}
 
@@ -246,25 +272,25 @@ Response.error = function() {};
  */
 Response.redirect = function(url, opt_status) {};
 
-/** @type {boolean} */
+/** @inheritDoc */
 Response.prototype.bodyUsed;
 
 /** @type {!ReadableByteStream} */
 Response.prototype.body;
 
-/** @return {!Promise<!ArrayBuffer>} */
+/** @inheritDoc */
 Response.prototype.arrayBuffer = function() {};
 
-/** @return {!Promise<!Blob>} */
+/** @inheritDoc */
 Response.prototype.blob = function() {};
 
-/** @return {!Promise<!FormData>} */
+/** @inheritDoc */
 Response.prototype.formData = function() {};
 
-/** @return {!Promise<!Object>} */
+/** @inheritDoc */
 Response.prototype.json = function() {};
 
-/** @return {!Promise<string>} */
+/** @inheritDoc */
 Response.prototype.text = function() {};
 
 /** @type {ResponseType} */
