@@ -60,6 +60,7 @@ IDBFactory.prototype.open = function(name, opt_version) {};
  */
 IDBFactory.prototype.deleteDatabase = function(name) {};
 
+
 /**
  * @constructor
  * @implements {EventTarget}
@@ -88,6 +89,7 @@ IDBRequest.prototype.removeEventListener =
  * @return {boolean}
  */
 IDBRequest.prototype.dispatchEvent = function(evt) {};
+
 
 /**
  * @constructor
@@ -130,6 +132,7 @@ IDBRequest.prototype.source; // readonly
 /** @type {!IDBTransaction} */
 IDBRequest.prototype.transaction; // readonly
 
+
 /**
  * @constructor
  * @extends {IDBRequest}
@@ -146,6 +149,7 @@ IDBOpenDBRequest.prototype.onblocked = function(e) {};
  * @type {function(!IDBVersionChangeEvent)}
  */
 IDBOpenDBRequest.prototype.onupgradeneeded = function(e) {};
+
 
 /**
  * @constructor
@@ -249,6 +253,7 @@ IDBDatabase.prototype.removeEventListener =
  */
 IDBDatabase.prototype.dispatchEvent = function(evt) {};
 
+
 /**
  * Typedef for valid key types according to the w3 specification. Note that this
  * is slightly wider than what is actually allowed, as all Array elements must
@@ -257,6 +262,7 @@ IDBDatabase.prototype.dispatchEvent = function(evt) {};
  * @typedef {number|string|!Date|!Array<?>}
  */
 var IDBKeyType;
+
 
 /**
  * @constructor
@@ -351,6 +357,7 @@ IDBObjectStore.prototype.deleteIndex = function(indexName) {};
  */
 IDBObjectStore.prototype.count = function(key) {};
 
+
 /**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBIndex
@@ -406,6 +413,7 @@ IDBIndex.prototype.get = function(key) {};
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.getKey = function(key) {};
+
 
 /**
  * @constructor
@@ -470,6 +478,7 @@ IDBCursor.prototype.advance = function(count) {};
  */
 IDBCursor.prototype.delete = function() {};
 
+
 /**
  * @constructor
  * @extends {IDBCursor}
@@ -479,6 +488,7 @@ function IDBCursorWithValue() {}
 
 /** @type {*} */
 IDBCursorWithValue.prototype.value; // readonly
+
 
 /**
  * @constructor
@@ -531,6 +541,7 @@ IDBTransaction.prototype.oncomplete = function() {};
  * @type {!Function}
  */
 IDBTransaction.prototype.onerror = function() {};
+
 
 /**
  * @constructor
@@ -627,6 +638,7 @@ IDBKeyRange.bound = function(left, right, openLeft, openRight) {};
  */
 webkitIDBKeyRange.bound = function(left, right, openLeft, openRight) {};
 
+
 /**
  * @constructor
  * @extends {Event}
@@ -645,6 +657,7 @@ IDBVersionChangeEvent.prototype.oldVersion;
  * @const
  */
 IDBVersionChangeEvent.prototype.newVersion;
+
 
 /**
  * @constructor
