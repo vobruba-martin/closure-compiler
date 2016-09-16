@@ -101,6 +101,28 @@ IDBIndexParameters.prototype.multiEntry;
 
 
 /**
+ * TODO(vobruba-martin): Once EventInit becomes a record type
+ * make this extend from it.
+ * 
+ * @record
+ * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBVersionChangeEventInit
+ */
+function IDBVersionChangeEventInit() {};
+
+/** @type {(undefined|boolean)} */
+IDBVersionChangeEventInit.prototype.bubbles;
+
+/** @type {(undefined|boolean)} */
+IDBVersionChangeEventInit.prototype.cancelable;
+
+/** @type {(undefined|number)} */
+IDBVersionChangeEventInit.prototype.oldVersion;
+
+/** @type {(undefined|number|null)} */
+IDBVersionChangeEventInit.prototype.newVersion;
+
+
+/**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBFactory
  */
@@ -699,11 +721,13 @@ webkitIDBKeyRange.bound = function(left, right, openLeft, openRight) {};
 
 
 /**
+ * @param {string} type
+ * @param {!IDBVersionChangeEventInit=} opt_eventInit
  * @constructor
  * @extends {Event}
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBVersionChangeEvent
  */
-function IDBVersionChangeEvent() {}
+function IDBVersionChangeEvent(type, opt_eventInit) {}
 
 /**
  * @type {number}
@@ -719,11 +743,13 @@ IDBVersionChangeEvent.prototype.newVersion;
 
 
 /**
+ * @param {string} type
+ * @param {!IDBVersionChangeEventInit=} opt_eventInit
  * @constructor
  * @extends {IDBVersionChangeEvent}
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBVersionChangeEvent
  */
-function webkitIDBVersionChangeEvent() {}
+function webkitIDBVersionChangeEvent(type, opt_eventInit) {}
 
 /**
  * @type {string}
