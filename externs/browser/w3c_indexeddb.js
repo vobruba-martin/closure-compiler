@@ -97,30 +97,6 @@ function webkitIDBRequest() {}
 
 /**
  * @type {number}
- * @const
- */
-IDBRequest.LOADING;
-
-/**
- * @type {number}
- * @const
- */
-webkitIDBRequest.LOADING;
-
-/**
- * @type {number}
- * @const
- */
-IDBRequest.DONE;
-
-/**
- * @type {number}
- * @const
- */
-webkitIDBRequest.DONE;
-
-/**
- * @type {number}
  */
 IDBRequest.prototype.readyState; // readonly
 
