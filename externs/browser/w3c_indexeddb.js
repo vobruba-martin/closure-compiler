@@ -88,6 +88,19 @@ IDBObjectStoreParameters.prototype.autoIncrement;
 
 
 /**
+ * @record
+ * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBIndexParameters
+ */
+function IDBIndexParameters() {};
+
+/** @type {(undefined|boolean)} */
+IDBIndexParameters.prototype.unique;
+
+/** @type {(undefined|boolean)} */
+IDBIndexParameters.prototype.multiEntry;
+
+
+/**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBFactory
  */
@@ -378,7 +391,7 @@ IDBObjectStore.prototype.openCursor = function(range, direction) {};
 /**
  * @param {string} name The name of the index.
  * @param {string|!Array<string>} keyPath The path to the index key.
- * @param {!Object=} opt_paramters Optional parameters
+ * @param {!IDBIndexParameters=} opt_paramters Optional parameters
  *     for the created index.
  * @return {!IDBIndex} The IDBIndex object.
  */
