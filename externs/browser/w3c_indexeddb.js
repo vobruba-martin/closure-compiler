@@ -63,6 +63,18 @@ var IDBRequestReadyState = {
 
 
 /**
+ * @enum {string}
+ * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBCursorDirection
+ */
+var IDBCursorDirection = {
+	NEXT: 'next',
+	NEXTUNIQUE: 'nextunique',
+	PREV: 'prev',
+	PREVUNIQUE, 'prevunique'
+};
+
+
+/**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBFactory
  */
@@ -345,7 +357,7 @@ IDBObjectStore.prototype.clear = function() {};
 
 /**
  * @param {!IDBKeyRange=} range The range of the cursor.
- * @param {(number|string)=} direction The direction of cursor enumeration.
+ * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBObjectStore.prototype.openCursor = function(range, direction) {};
@@ -411,14 +423,14 @@ IDBIndex.prototype.unique;
 
 /**
  * @param {!IDBKeyRange=} range The range of the cursor.
- * @param {(number|string)=} direction The direction of cursor enumeration.
+ * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openCursor = function(range, direction) {};
 
 /**
  * @param {!IDBKeyRange=} range The range of the cursor.
- * @param {(number|string)=} direction The direction of cursor enumeration.
+ * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openKeyCursor = function(range, direction) {};
@@ -456,7 +468,7 @@ function webkitIDBCursor() {}
 IDBCursor.prototype.source;
 
 /**
- * @type {number}
+ * @type {!IDBCursorDirection}
  * @const
  */
 IDBCursor.prototype.direction;
