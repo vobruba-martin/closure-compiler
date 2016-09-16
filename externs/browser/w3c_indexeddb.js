@@ -70,7 +70,7 @@ var IDBCursorDirection = {
 	NEXT: 'next',
 	NEXTUNIQUE: 'nextunique',
 	PREV: 'prev',
-	PREVUNIQUE, 'prevunique'
+	PREVUNIQUE: 'prevunique'
 };
 
 
