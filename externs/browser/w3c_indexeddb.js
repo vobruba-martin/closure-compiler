@@ -458,7 +458,7 @@ IDBIndex.prototype.name;
 IDBIndex.prototype.objectStore;
 
 /**
- * @type {string}
+ * @type {*}
  * @const
  */
 IDBIndex.prototype.keyPath;
@@ -467,17 +467,23 @@ IDBIndex.prototype.keyPath;
  * @type {boolean}
  * @const
  */
+IDBIndex.prototype.multiEntry;
+
+/**
+ * @type {boolean}
+ * @const
+ */
 IDBIndex.prototype.unique;
 
 /**
- * @param {!IDBKeyRange=} range The range of the cursor.
+ * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
  * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openCursor = function(range, direction) {};
 
 /**
- * @param {!IDBKeyRange=} range The range of the cursor.
+ * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
  * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
@@ -494,6 +500,12 @@ IDBIndex.prototype.get = function(key) {};
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.getKey = function(key) {};
+
+/**
+ * @param {(!IDBKeyType|!IDBKeyRange)=} opt_key
+ * @return {!IDBRequest}
+ */
+IDBIndex.prototype.count = function(opt_key) {};
 
 
 /**
