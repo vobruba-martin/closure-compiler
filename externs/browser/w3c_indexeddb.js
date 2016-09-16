@@ -421,54 +421,6 @@ function IDBCursor() {}
 function webkitIDBCursor() {}
 
 /**
- * @const
- * @type {number}
- */
-IDBCursor.NEXT;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBCursor.NEXT;
-
-/**
- * @const
- * @type {number}
- */
-IDBCursor.NEXT_NO_DUPLICATE;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBCursor.NEXT_NO_DUPLICATE;
-
-/**
- * @const
- * @type {number}
- */
-IDBCursor.PREV;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBCursor.PREV;
-
-/**
- * @const
- * @type {number}
- */
-IDBCursor.PREV_NO_DUPLICATE;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBCursor.PREV_NO_DUPLICATE;
-
-/**
  * @type {*}
  * @const
  */
