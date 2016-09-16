@@ -357,7 +357,7 @@ function IDBObjectStore() {}
 IDBObjectStore.prototype.name;
 
 /**
- * @type {string}
+ * @type {*}
  */
 IDBObjectStore.prototype.keyPath;
 
