@@ -141,6 +141,13 @@ IDBFactory.prototype.open = function(name, opt_version) {};
  */
 IDBFactory.prototype.deleteDatabase = function(name) {};
 
+/**
+ * @param {*} first
+ * @param {*} second
+ * @return {number}
+ */
+IDBFactory.prototype.cmp = function(first, second) {};
+
 
 /**
  * @constructor
