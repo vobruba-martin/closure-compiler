@@ -75,6 +75,19 @@ var IDBCursorDirection = {
 
 
 /**
+ * @record
+ * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBObjectStoreParameters
+ */
+function IDBObjectStoreParameters() {};
+
+/** @type {(undefined|string|!Array<string>|null)} */
+IDBObjectStoreParameters.prototype.keyPath;
+
+/** @type {(undefined|boolean)} */
+IDBObjectStoreParameters.prototype.autoIncrement;
+
+
+/**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBFactory
  */
@@ -217,7 +230,7 @@ IDBDatabase.prototype.objectStoreNames;
 
 /**
  * @param {string} name The name of the object store.
- * @param {!Object=} opt_parameters Parameters to be passed
+ * @param {!IDBObjectStoreParameters=} opt_parameters Parameters to be passed
  *     creating the object store.
  * @return {!IDBObjectStore} The created/open object store.
  */
