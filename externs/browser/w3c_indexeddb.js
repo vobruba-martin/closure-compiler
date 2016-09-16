@@ -53,6 +53,16 @@ var IDBTransactionMode = {
 
 
 /**
+ * @enum {string}
+ * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBRequestReadyState
+ */
+var IDBRequestReadyState = {
+	PENDING: 'pending',
+	DONE: 'done'
+};
+
+
+/**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBFactory
  */
@@ -110,7 +120,7 @@ IDBRequest.prototype.dispatchEvent = function(evt) {};
 function webkitIDBRequest() {}
 
 /**
- * @type {number}
+ * @type {!IDBRequestReadyState}
  */
 IDBRequest.prototype.readyState; // readonly
 
