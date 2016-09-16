@@ -42,6 +42,17 @@ Window.prototype.indexedDB;
 
 
 /**
+ * @enum {string}
+ * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBTransactionMode
+ */
+var IDBTransactionMode = {
+	READONLY: 'readonly',
+	READWRITE: 'readwrite',
+	VERSIONCHANGE: 'versionchange'
+};
+
+
+/**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBFactory
  */
@@ -204,8 +215,8 @@ IDBDatabase.prototype.deleteObjectStore = function(name) {};
 IDBDatabase.prototype.setVersion = function(version) {};
 
 /**
- * @param {string|Array<string>} storeNames The stores to open in this transaction.
- * @param {(number|string)=} mode The mode for opening the object stores.
+ * @param {string|!Array<string>} storeNames The stores to open in this transaction.
+ * @param {!IDBTransactionMode=} mode The mode for opening the object stores.
  * @return {!IDBTransaction} The IDBRequest object.
  */
 IDBDatabase.prototype.transaction = function(storeNames, mode) {};
@@ -504,7 +515,7 @@ function IDBTransaction() {}
 function webkitIDBTransaction() {}
 
 /**
- * @type {number|string}
+ * @type {!IDBTransactionMode}
  * @const
  */
 IDBTransaction.prototype.mode;
