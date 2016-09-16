@@ -590,60 +590,60 @@ IDBKeyRange.prototype.lower;
 IDBKeyRange.prototype.upper;
 
 /**
- * @type {*}
+ * @type {boolean}
  * @const
  */
 IDBKeyRange.prototype.lowerOpen;
 
 /**
- * @type {*}
+ * @type {boolean}
  * @const
  */
 IDBKeyRange.prototype.upperOpen;
 
 /**
- * @param {!IDBKeyType} value The single key value of this range.
+ * @param {*} value The single key value of this range.
  * @return {!IDBKeyRange} The key range.
  */
 IDBKeyRange.only = function(value) {};
 
 /**
- * @param {!IDBKeyType} value The single key value of this range.
+ * @param {*} value The single key value of this range.
  * @return {!IDBKeyRange} The key range.
  */
 webkitIDBKeyRange.only = function(value) {};
 
 /**
- * @param {!IDBKeyType} bound Creates a lower bound key range.
+ * @param {*} bound Creates a lower bound key range.
  * @param {boolean=} open Open the key range.
  * @return {!IDBKeyRange} The key range.
  */
 IDBKeyRange.lowerBound = function(bound, open) {};
 
 /**
- * @param {!IDBKeyType} bound Creates a lower bound key range.
+ * @param {*} bound Creates a lower bound key range.
  * @param {boolean=} open Open the key range.
  * @return {!IDBKeyRange} The key range.
  */
 webkitIDBKeyRange.lowerBound = function(bound, open) {};
 
 /**
- * @param {!IDBKeyType} bound Creates an upper bound key range.
+ * @param {*} bound Creates an upper bound key range.
  * @param {boolean=} open Open the key range.
  * @return {!IDBKeyRange} The key range.
  */
 IDBKeyRange.upperBound = function(bound, open) {};
 
 /**
- * @param {!IDBKeyType} bound Creates an upper bound key range.
+ * @param {*} bound Creates an upper bound key range.
  * @param {boolean=} open Open the key range.
  * @return {!IDBKeyRange} The key range.
  */
 webkitIDBKeyRange.upperBound = function(bound, open) {};
 
 /**
- * @param {!IDBKeyType} left The left bound value.
- * @param {!IDBKeyType} right The right bound value.
+ * @param {*} left The left bound value.
+ * @param {*} right The right bound value.
  * @param {boolean=} openLeft Whether the left bound value should be excluded.
  * @param {boolean=} openRight Whether the right bound value should be excluded.
  * @return {!IDBKeyRange} The key range.
@@ -651,8 +651,8 @@ webkitIDBKeyRange.upperBound = function(bound, open) {};
 IDBKeyRange.bound = function(left, right, openLeft, openRight) {};
 
 /**
- * @param {!IDBKeyType} left The left bound value.
- * @param {!IDBKeyType} right The right bound value.
+ * @param {*} left The left bound value.
+ * @param {*} right The right bound value.
  * @param {boolean=} openLeft Whether the left bound value should be excluded.
  * @param {boolean=} openRight Whether the right bound value should be excluded.
  * @return {!IDBKeyRange} The key range.
