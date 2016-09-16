@@ -253,13 +253,7 @@ function IDBDatabase() {}
 IDBDatabase.prototype.name;
 
 /**
- * @type {string}
- * @const
- */
-IDBDatabase.prototype.description;
-
-/**
- * @type {string}
+ * @type {number}
  * @const
  */
 IDBDatabase.prototype.version;
@@ -286,13 +280,7 @@ IDBDatabase.prototype.createObjectStore =
 IDBDatabase.prototype.deleteObjectStore = function(name) {};
 
 /**
- * @param {string} version The new version of the database.
- * @return {!IDBRequest} The IDBRequest object.
- */
-IDBDatabase.prototype.setVersion = function(version) {};
-
-/**
- * @param {string|!Array<string>} storeNames The stores to open in this transaction.
+ * @param {(string|!Array<string>)} storeNames The stores to open in this transaction.
  * @param {!IDBTransactionMode=} mode The mode for opening the object stores.
  * @return {!IDBTransaction} The IDBRequest object.
  */
@@ -305,17 +293,22 @@ IDBDatabase.prototype.transaction = function(storeNames, mode) {};
 IDBDatabase.prototype.close = function() {};
 
 /**
- * @type {?Function}
+ * @type {?function(!Event)}
  */
 IDBDatabase.prototype.onabort = function() {};
 
 /**
- * @type {?Function}
+ * @type {?function(!Event)}
+ */
+IDBDatabase.prototype.onclose = function() {};
+
+/**
+ * @type {?function(!Event)}
  */
 IDBDatabase.prototype.onerror = function() {};
 
 /**
- * @type {?Function}
+ * @type {?function(!IDBVersionChangeEvent)}
  */
 IDBDatabase.prototype.onversionchange = function() {};
 
