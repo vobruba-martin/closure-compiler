@@ -295,22 +295,22 @@ IDBDatabase.prototype.close = function() {};
 /**
  * @type {?function(!Event)}
  */
-IDBDatabase.prototype.onabort = function() {};
+IDBDatabase.prototype.onabort;
 
 /**
  * @type {?function(!Event)}
  */
-IDBDatabase.prototype.onclose = function() {};
+IDBDatabase.prototype.onclose;
 
 /**
  * @type {?function(!Event)}
  */
-IDBDatabase.prototype.onerror = function() {};
+IDBDatabase.prototype.onerror;
 
 /**
  * @type {?function(!IDBVersionChangeEvent)}
  */
-IDBDatabase.prototype.onversionchange = function() {};
+IDBDatabase.prototype.onversionchange;
 
 /**
  * @param {boolean=} opt_useCapture
@@ -628,17 +628,17 @@ IDBTransaction.prototype.abort = function() {};
 /**
  * @type {?function(!Event)}
  */
-IDBTransaction.prototype.onabort = function() {};
+IDBTransaction.prototype.onabort;
 
 /**
  * @type {?function(!Event)}
  */
-IDBTransaction.prototype.oncomplete = function() {};
+IDBTransaction.prototype.oncomplete;
 
 /**
  * @type {?function(!Event)}
  */
-IDBTransaction.prototype.onerror = function() {};
+IDBTransaction.prototype.onerror;
 
 
 /**
