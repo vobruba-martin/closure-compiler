@@ -522,7 +522,7 @@ function IDBCursor() {}
 function webkitIDBCursor() {}
 
 /**
- * @type {*}
+ * @type {(!IDBObjectStore|!IDBIndex)}
  * @const
  */
 IDBCursor.prototype.source;
@@ -540,7 +540,7 @@ IDBCursor.prototype.direction;
 IDBCursor.prototype.key;
 
 /**
- * @type {number}
+ * @type {!IDBKeyType}
  * @const
  */
 IDBCursor.prototype.primaryKey;
@@ -609,6 +609,11 @@ IDBTransaction.prototype.mode;
 IDBTransaction.prototype.db;
 
 /**
+ * @type {!DOMError}
+ */
+IDBTransaction.prototype.error;
+
+/**
  * @param {string} name The name of the object store to retrieve.
  * @return {!IDBObjectStore} The object store.
  */
@@ -621,17 +626,17 @@ IDBTransaction.prototype.objectStore = function(name) {};
 IDBTransaction.prototype.abort = function() {};
 
 /**
- * @type {!Function}
+ * @type {?function(!Event)}
  */
 IDBTransaction.prototype.onabort = function() {};
 
 /**
- * @type {!Function}
+ * @type {?function(!Event)}
  */
 IDBTransaction.prototype.oncomplete = function() {};
 
 /**
- * @type {!Function}
+ * @type {?function(!Event)}
  */
 IDBTransaction.prototype.onerror = function() {};
 
