@@ -494,42 +494,6 @@ function IDBTransaction() {}
 function webkitIDBTransaction() {}
 
 /**
- * @const
- * @type {number}
- */
-IDBTransaction.READ_WRITE;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBTransaction.READ_WRITE;
-
-/**
- * @const
- * @type {number}
- */
-IDBTransaction.READ_ONLY;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBTransaction.READ_ONLY;
-
-/**
- * @const
- * @type {number}
- */
-IDBTransaction.VERSION_CHANGE;
-
-/**
- * @const
- * @type {number}
- */
-webkitIDBTransaction.VERSION_CHANGE;
-
-/**
  * @type {number|string}
  * @const
  */
