@@ -280,8 +280,10 @@ IDBDatabase.prototype.createObjectStore =
 IDBDatabase.prototype.deleteObjectStore = function(name) {};
 
 /**
+ * TODO(vobruba-martin): Change mode param to !IDBTransactionMode once CC understands string literal types.
+ * 
  * @param {(string|!Array<string>)} storeNames The stores to open in this transaction.
- * @param {!IDBTransactionMode=} mode The mode for opening the object stores.
+ * @param {(!IDBTransactionMode|string)=} mode The mode for opening the object stores.
  * @return {!IDBTransaction} The IDBRequest object.
  */
 IDBDatabase.prototype.transaction = function(storeNames, mode) {};
@@ -404,8 +406,10 @@ IDBObjectStore.prototype.get = function(key) {};
 IDBObjectStore.prototype.clear = function() {};
 
 /**
+ * TODO(vobruba-martin): Change direction param to !IDBCursorDirection once CC understands string literal types.
+ * 
  * @param {!IDBKeyRange=} range The range of the cursor.
- * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
+ * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBObjectStore.prototype.openCursor = function(range, direction) {};
@@ -476,15 +480,19 @@ IDBIndex.prototype.multiEntry;
 IDBIndex.prototype.unique;
 
 /**
+ * TODO(vobruba-martin): Change direction param to !IDBCursorDirection once CC understands string literal types.
+ * 
  * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
- * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
+ * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openCursor = function(range, direction) {};
 
 /**
+ * TODO(vobruba-martin): Change direction param to !IDBCursorDirection once CC understands string literal types.
+ * 
  * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
- * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
+ * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openKeyCursor = function(range, direction) {};
