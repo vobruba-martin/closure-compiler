@@ -63,7 +63,7 @@ public class PrintStreamErrorReportGenerator implements SortingErrorManager.Erro
       if (manager.getTypedPercent() > 0.0) {
         stream.print(
             SimpleFormat.format(
-                "%d error(s), %d warning(s), %.1f%% typed%n",
+                "%d error(s), %d warning(s), %.10f%% typed%n",
                 manager.getErrorCount(), manager.getWarningCount(), manager.getTypedPercent()));
       } else {
         stream.print(

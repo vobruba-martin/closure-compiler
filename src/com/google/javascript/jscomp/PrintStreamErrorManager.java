@@ -69,7 +69,7 @@ public class PrintStreamErrorManager extends BasicErrorManager {
         (summaryDetailLevel >= 1 && getErrorCount() + getWarningCount() > 0) ||
         (summaryDetailLevel >= 2 && getTypedPercent() > 0.0)) {
       if (getTypedPercent() > 0.0) {
-        stream.print(SimpleFormat.format("%d error(s), %d warning(s), %.1f%% typed%n",
+        stream.print(SimpleFormat.format("%d error(s), %d warning(s), %.10f%% typed%n",
             getErrorCount(), getWarningCount(), getTypedPercent()));
       } else {
         stream.print(SimpleFormat.format("%d error(s), %d warning(s)%n", getErrorCount(),
