@@ -279,7 +279,6 @@ ServiceWorkerGlobalScope.prototype.onmessage;
 /** @type {!IDBFactory|undefined} */
 ServiceWorkerGlobalScope.prototype.indexedDB;
 
-
 /**
  * @see http://www.w3.org/TR/service-workers/#service-worker-client-interface
  * @constructor
