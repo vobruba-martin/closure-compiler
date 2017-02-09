@@ -402,12 +402,12 @@ IDBRequest.prototype.transaction; // readonly
 function IDBOpenDBRequest() {}
 
 /**
- * @type {function(!IDBVersionChangeEvent)}
+ * @type {function((!IDBVersionChangeEvent|!webkitIDBVersionChangeEvent))}
  */
 IDBOpenDBRequest.prototype.onblocked = function(e) {};
 
 /**
- * @type {function(!IDBVersionChangeEvent)}
+ * @type {function((!IDBVersionChangeEvent|!webkitIDBVersionChangeEvent))}
  */
 IDBOpenDBRequest.prototype.onupgradeneeded = function(e) {};
 
