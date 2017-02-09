@@ -653,18 +653,20 @@ IDBIndex.prototype.multiEntry;
 IDBIndex.prototype.unique;
 
 /**
+ * TODO: Currently it isn't safe to disallow nulls for the range argument due to Google internals.
  * TODO: Change direction param to !IDBCursorDirection once CC understands string literal types.
  * 
- * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
+ * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openCursor = function(range, direction) {};
 
 /**
+ * TODO: Currently it isn't safe to disallow nulls for the range argument due to Google internals.
  * TODO: Change direction param to !IDBCursorDirection once CC understands string literal types.
  * 
- * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
+ * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
