@@ -483,7 +483,7 @@ IDBDatabase.prototype.onclose;
 IDBDatabase.prototype.onerror;
 
 /**
- * @type {?function(!IDBVersionChangeEvent)}
+ * @type {?function(!IDBVersionChangeEvent|!webkitIDBVersionChangeEvent)}
  */
 IDBDatabase.prototype.onversionchange;
 
