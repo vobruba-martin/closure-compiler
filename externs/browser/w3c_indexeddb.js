@@ -46,9 +46,9 @@ Window.prototype.indexedDB;
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBTransactionMode
  */
 var IDBTransactionMode = {
-	READONLY: 'readonly',
-	READWRITE: 'readwrite',
-	VERSIONCHANGE: 'versionchange'
+    READONLY: 'readonly',
+    READWRITE: 'readwrite',
+    VERSIONCHANGE: 'versionchange'
 };
 
 
@@ -57,8 +57,8 @@ var IDBTransactionMode = {
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBRequestReadyState
  */
 var IDBRequestReadyState = {
-	PENDING: 'pending',
-	DONE: 'done'
+    PENDING: 'pending',
+    DONE: 'done'
 };
 
 
@@ -67,10 +67,10 @@ var IDBRequestReadyState = {
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBCursorDirection
  */
 var IDBCursorDirection = {
-	NEXT: 'next',
-	NEXTUNIQUE: 'nextunique',
-	PREV: 'prev',
-	PREVUNIQUE: 'prevunique'
+    NEXT: 'next',
+    NEXTUNIQUE: 'nextunique',
+    PREV: 'prev',
+    PREVUNIQUE: 'prevunique'
 };
 
 
