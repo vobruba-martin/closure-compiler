@@ -152,6 +152,8 @@ IDBFactory.prototype.cmp = function(first, second) {};
 /**
  * @constructor
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBDatabaseException
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabaseException
+ * @deprecated Use DOMException instead
  */
 function IDBDatabaseException() {}
 
@@ -159,6 +161,8 @@ function IDBDatabaseException() {}
  * @constructor
  * @extends {IDBDatabaseException}
  * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBDatabaseException
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabaseException
+ * @deprecated Use DOMException instead
  */
 function webkitIDBDatabaseException() {}
 
