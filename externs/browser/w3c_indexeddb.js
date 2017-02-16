@@ -101,19 +101,11 @@ IDBIndexParameters.prototype.multiEntry;
 
 
 /**
- * TODO: Once EventInit becomes a record type
- * make this extend from it.
- * 
  * @record
+ * @extends {EventInit}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBVersionChangeEventInit
  */
 function IDBVersionChangeEventInit() {};
-
-/** @type {(undefined|boolean)} */
-IDBVersionChangeEventInit.prototype.bubbles;
-
-/** @type {(undefined|boolean)} */
-IDBVersionChangeEventInit.prototype.cancelable;
 
 /** @type {(undefined|number)} */
 IDBVersionChangeEventInit.prototype.oldVersion;
