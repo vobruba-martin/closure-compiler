@@ -452,7 +452,7 @@ IDBDatabase.prototype.deleteObjectStore = function(name) {};
 IDBDatabase.prototype.setVersion = function(version) {};
 
 /**
- * TODO: Change mode param to !IDBTransactionMode once CC understands string literal types.
+ * TODO: Change mode param to !IDBTransactionMode once compiler understands string literal types.
  * 
  * @param {(string|!Array<string>)} storeNames The stores to open in this transaction.
  * @param {(!IDBTransactionMode|string)=} mode The mode for opening the object stores.
@@ -578,7 +578,7 @@ IDBObjectStore.prototype.get = function(key) {};
 IDBObjectStore.prototype.clear = function() {};
 
 /**
- * TODO: Change direction param to !IDBCursorDirection once CC understands string literal types.
+ * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
  * 
  * @param {!IDBKeyRange=} range The range of the cursor.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
@@ -653,7 +653,7 @@ IDBIndex.prototype.unique;
 
 /**
  * TODO: Currently it isn't safe to disallow nulls for the range argument due to Google internals.
- * TODO: Change direction param to !IDBCursorDirection once CC understands string literal types.
+ * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
  * 
  * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
@@ -663,7 +663,7 @@ IDBIndex.prototype.openCursor = function(range, direction) {};
 
 /**
  * TODO: Currently it isn't safe to disallow nulls for the range argument due to Google internals.
- * TODO: Change direction param to !IDBCursorDirection once CC understands string literal types.
+ * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
  * 
  * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
