@@ -445,6 +445,13 @@ IDBDatabase.prototype.createObjectStore =
 IDBDatabase.prototype.deleteObjectStore = function(name) {};
 
 /**
+ * @param {string} version The new version of the database.
+ * @return {!IDBRequest} The IDBRequest object.
+ * @deprecated
+ */
+IDBDatabase.prototype.setVersion = function(version) {};
+
+/**
  * TODO: Change mode param to !IDBTransactionMode once CC understands string literal types.
  * 
  * @param {(string|!Array<string>)} storeNames The stores to open in this transaction.
