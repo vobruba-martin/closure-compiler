@@ -418,6 +418,13 @@ function IDBDatabase() {}
 IDBDatabase.prototype.name;
 
 /**
+ * @type {string}
+ * @const
+ * @deprecated
+ */
+IDBDatabase.prototype.description;
+
+/**
  * @type {number}
  * @const
  */
