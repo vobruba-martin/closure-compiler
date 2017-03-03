@@ -23,6 +23,7 @@
  *
  * @externs
  * @author guido.tapia@picnet.com.au (Guido Tapia)
+ * @author vobruba.martin@gmail.com (Martin Vobruba)
  */
 
 /** @type {!IDBFactory|undefined} */
