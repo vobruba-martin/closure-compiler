@@ -43,36 +43,30 @@ Window.prototype.indexedDB;
 
 
 /**
- * @enum {string}
+ * Posible values: 'readonly', 'readwrite', 'versionchange'
+ * 
+ * @typedef {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBTransactionMode
  */
-var IDBTransactionMode = {
-    READONLY: 'readonly',
-    READWRITE: 'readwrite',
-    VERSIONCHANGE: 'versionchange'
-};
+var IDBTransactionMode;
 
 
 /**
- * @enum {string}
+ * Posible values: 'pending', 'done'
+ * 
+ * @typedef {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBRequestReadyState
  */
-var IDBRequestReadyState = {
-    PENDING: 'pending',
-    DONE: 'done'
-};
+var IDBRequestReadyState;
 
 
 /**
+ * Posible values: 'next', 'nextunique', 'prev', 'prevunique'
+ * 
  * @enum {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBCursorDirection
  */
-var IDBCursorDirection = {
-    NEXT: 'next',
-    NEXTUNIQUE: 'nextunique',
-    PREV: 'prev',
-    PREVUNIQUE: 'prevunique'
-};
+var IDBCursorDirection;
 
 
 /**
@@ -273,10 +267,8 @@ IDBDatabase.prototype.createObjectStore =
 IDBDatabase.prototype.deleteObjectStore = function(name) {};
 
 /**
- * TODO: Change mode param to !IDBTransactionMode once compiler understands string literal types.
- * 
  * @param {(string|!Array<string>)} storeNames The stores to open in this transaction.
- * @param {(!IDBTransactionMode|string)=} mode The mode for opening the object stores.
+ * @param {!IDBTransactionMode=} mode The mode for opening the object stores.
  * @return {!IDBTransaction} The IDBRequest object.
  */
 IDBDatabase.prototype.transaction = function(storeNames, mode) {};
@@ -399,11 +391,8 @@ IDBObjectStore.prototype.get = function(key) {};
 IDBObjectStore.prototype.clear = function() {};
 
 /**
- * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
- * 
- * 
  * @param {?IDBKeyRange=} range The range of the cursor. Nullable because IE <11 has problems with undefined.
- * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
+ * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBObjectStore.prototype.openCursor = function(range, direction) {};
@@ -474,19 +463,15 @@ IDBIndex.prototype.multiEntry;
 IDBIndex.prototype.unique;
 
 /**
- * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
- * 
  * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor. Nullable because IE <11 has problems with undefined.
- * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
+ * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openCursor = function(range, direction) {};
 
 /**
- * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
- * 
  * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor. Nullable because IE <11 has problems with undefined.
- * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
+ * @param {!IDBCursorDirection=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
 IDBIndex.prototype.openKeyCursor = function(range, direction) {};
