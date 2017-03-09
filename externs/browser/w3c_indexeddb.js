@@ -43,7 +43,7 @@ Window.prototype.indexedDB;
 
 
 /**
- * Posible values: 'readonly', 'readwrite', 'versionchange'
+ * Possible values: 'readonly', 'readwrite', 'versionchange'
  * 
  * @typedef {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBTransactionMode
@@ -52,7 +52,7 @@ var IDBTransactionMode;
 
 
 /**
- * Posible values: 'pending', 'done'
+ * Possible values: 'pending', 'done'
  * 
  * @typedef {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBRequestReadyState
@@ -61,7 +61,7 @@ var IDBRequestReadyState;
 
 
 /**
- * Posible values: 'next', 'nextunique', 'prev', 'prevunique'
+ * Possible values: 'next', 'nextunique', 'prev', 'prevunique'
  * 
  * @enum {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBCursorDirection
