@@ -401,7 +401,8 @@ IDBObjectStore.prototype.clear = function() {};
 /**
  * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
  * 
- * @param {!IDBKeyRange=} range The range of the cursor.
+ * 
+ * @param {?IDBKeyRange=} range The range of the cursor. Nullable because IE <11 has problems with undefined.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
@@ -475,7 +476,7 @@ IDBIndex.prototype.unique;
 /**
  * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
  * 
- * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
+ * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor. Nullable because IE <11 has problems with undefined.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
@@ -484,7 +485,7 @@ IDBIndex.prototype.openCursor = function(range, direction) {};
 /**
  * TODO: Change direction param to !IDBCursorDirection once compiler understands string literal types.
  * 
- * @param {(!IDBKeyType|!IDBKeyRange)=} range The range of the cursor.
+ * @param {(!IDBKeyType|?IDBKeyRange)=} range The range of the cursor. Nullable because IE <11 has problems with undefined.
  * @param {(!IDBCursorDirection|string)=} direction The direction of cursor enumeration.
  * @return {!IDBRequest} The IDBRequest object.
  */
