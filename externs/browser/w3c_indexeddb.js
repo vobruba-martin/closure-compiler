@@ -63,7 +63,7 @@ var IDBRequestReadyState;
 /**
  * Possible values: 'next', 'nextunique', 'prev', 'prevunique'
  * 
- * @enum {string}
+ * @typedef {string}
  * @see https://www.w3.org/TR/IndexedDB/#idl-def-IDBCursorDirection
  */
 var IDBCursorDirection;
