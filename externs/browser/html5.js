@@ -2525,13 +2525,13 @@ HTMLVideoElement.prototype.webkitEnterFullScreen = function() {};
 
 /**
  * Stops displaying the video in full screen mode.
- * @return {undefined}
+ * @return {!Promise<void>}
  */
 HTMLVideoElement.prototype.webkitExitFullscreen = function() {};
 
 /**
  * Stops displaying the video in full screen mode.
- * @return {undefined}
+ * @return {!Promise<void>}
  */
 HTMLVideoElement.prototype.webkitExitFullScreen = function() {};
 
@@ -4151,12 +4151,15 @@ Document.prototype.fullscreenElement;
 
 /**
  * @see http://www.w3.org/TR/2012/WD-fullscreen-20120703/#dom-document-exitfullscreen
- * @return {undefined}
+ * @return {!Promise<void>}
  */
 Document.prototype.exitFullscreen = function() {};
 
 // Externs definitions of browser current implementations.
 // Firefox 10 implementation.
+/**
+ * @return {!Promise<void>}
+ */
 Element.prototype.mozRequestFullScreen = function() {};
 
 Element.prototype.mozRequestFullScreenWithKeys = function() {};
@@ -4164,6 +4167,9 @@ Element.prototype.mozRequestFullScreenWithKeys = function() {};
 /** @type {boolean} */
 Document.prototype.mozFullScreen;
 
+/**
+ * @return {!Promise<void>}
+ */
 Document.prototype.mozCancelFullScreen = function() {};
 
 /** @type {Element} */
@@ -4178,7 +4184,7 @@ Document.prototype.mozFullScreenEnabled;
  * Valid only for Webkit browsers.
  * @param {number=} opt_allowKeyboardInput Whether keyboard input is desired.
  *     Should use ALLOW_KEYBOARD_INPUT constant.
- * @return {undefined}
+ * @return {!Promise<void>}
  */
 Element.prototype.webkitRequestFullScreen = function(opt_allowKeyboardInput) {};
 
@@ -4187,13 +4193,14 @@ Element.prototype.webkitRequestFullScreen = function(opt_allowKeyboardInput) {};
  * Valid only for Webkit browsers.
  * @param {number=} opt_allowKeyboardInput Whether keyboard input is desired.
  *     Should use ALLOW_KEYBOARD_INPUT constant.
- * @return {undefined}
+ * @return {!Promise<void>}
  */
 Element.prototype.webkitRequestFullscreen = function(opt_allowKeyboardInput) {};
 
 /** @type {boolean} */
 Document.prototype.webkitIsFullScreen;
 
+/** @return {!Promise<void>} */
 Document.prototype.webkitCancelFullScreen = function() {};
 
 /** @type {boolean} */
@@ -4210,10 +4217,10 @@ Document.prototype.webkitFullScreenKeyboardInputAllowed;
 
 // IE 11 implementation.
 // http://msdn.microsoft.com/en-us/library/ie/dn265028(v=vs.85).aspx
-/** @return {void} */
+/** @return {!Promise<void>} */
 Element.prototype.msRequestFullscreen = function() {};
 
-/** @return {void} */
+/** @return {!Promise<void>} */
 Document.prototype.msExitFullscreen = function() {};
 
 /** @type {boolean} */
